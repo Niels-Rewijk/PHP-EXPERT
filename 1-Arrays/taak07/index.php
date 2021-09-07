@@ -80,16 +80,29 @@
     <!-- Loop door de array $nieuwsberichten en toon de gegevens in de juist HTML-tags  -->
 
 
-    <h1></h1>
-    <div class="content">
-
+    
+    
         <h2 class="title"></h2>
-        <p class="title"></p>
+        <p class="title">
+        <?php 
+            foreach ($nieuwsberichten as $themanaam => $thema) {
+                echo "<h1>" . $themanaam . "</h1>";
+                // echo "<pre>";
+                // var_dump($thema);
+                // echo "</pre>";
+                foreach($thema as $x){
+                    echo '<div class="content">';
+                    echo "<h2>" . $x["titel"] . "</h2>";
+                    echo "<h3>" . $x["beschrijving"] . "</h3>";
+                    echo "<img src=" . $x["image"] . ">";
+                    echo "</div>";
+                }
+                // break;
+            }
+        ?>
+        </p>
         <img src="" class="title">
 
     </div>
-
-
 </body>
-
 </html>

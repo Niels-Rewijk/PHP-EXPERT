@@ -37,3 +37,13 @@ $games = [
         'prijs' => '40.00'
     ]
 ];
+
+foreach ($speelgoed as $x => $value) {
+    echo "speelgoed " . $speelgoed[$x]["naam"] . " uit de categorie " . $speelgoed[$x]["soort"] . " kost " . $speelgoed[$x]["prijs"];
+    echo "<br>";
+}
+foreach ($games as $x => $value) {
+    echo "speelgoed " . $games[$x]["naam"] . " uit de categorie " . $games[$x]["uitgever"] . " kost " . $games[$x]["prijs"];
+    echo "<br>";
+}
+?>
